@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Beauty Ritual | Facials, Lash, Slimming, Head Spa &amp; Laser Hair Removal</title>
-<meta name="description" content="The Beauty Ritual is a calming neighborhood salon offering facials, lash services, body slimming, head spa, and diode laser hair removal. Book your ritual today.">
+<meta name="description" content="The Beauty Ritual is a calming salon offering facials, lash services, body slimming, head spa, and diode laser hair removal. Explore our locations, reviews, and products.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -16,28 +16,24 @@
 
 <header class="site-header" id="site-header">
   <div class="container header-inner">
-    <a href="#top" class="logo">
-      <span class="logo-mark" aria-hidden="true">
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="17" cy="17" r="16" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M17 8c3 3.2 5 6 5 9a5 5 0 1 1-10 0c0-3 2-5.8 5-9Z" fill="currentColor"/>
-        </svg>
-      </span>
-      <span class="logo-text">The Beauty Ritual</span>
+    <a href="index.html" class="logo">
+      <span class="logo-script">The Beauty</span>
+      <span class="logo-ritual">Ritual</span>
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Visit &amp; Hours</a></li>
-        <li class="nav-cta-mobile"><a href="#contact" class="btn btn-primary btn-small">Book Now</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta-mobile"><a href="contact.html" class="btn btn-primary btn-small">Book Now</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
-      <a href="#contact" class="btn btn-primary btn-small">Book Now</a>
+      <a href="contact.html" class="btn btn-primary btn-small">Book Now</a>
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
@@ -61,20 +57,23 @@
         treatments delivered with care, in a room that feels like an exhale.
       </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Book an Appointment</a>
-        <a href="#services" class="btn btn-ghost">Explore Services</a>
+        <a href="contact.html" class="btn btn-primary">Book an Appointment</a>
+        <a href="services.html" class="btn btn-ghost">Explore Services</a>
       </div>
     </div>
   </section>
 
-  <section class="section services" id="services">
+  <!-- Services -->
+  <section class="section" id="services">
     <div class="container">
-      <p class="eyebrow center">What we offer</p>
-      <h2 class="section-title center">Our Signature Services</h2>
-      <p class="section-lead center">
-        Every treatment is personalized to your skin, hair, and goals.
-        Here&rsquo;s where most clients begin their ritual.
-      </p>
+      <div class="section-head">
+        <p class="eyebrow center">What we offer</p>
+        <h2 class="section-title center">Our Signature Services</h2>
+        <p class="section-lead center">
+          Every treatment is personalized to your skin, hair, and goals.
+          Here&rsquo;s where most clients begin their ritual.
+        </p>
+      </div>
 
       <div class="service-grid">
 
@@ -89,6 +88,7 @@
           <h3>Facials</h3>
           <p>Customized deep-cleansing, hydrating, and brightening facials that
              restore balance and leave skin visibly renewed.</p>
+          <a class="card-link" href="services.html#facials">Learn more &rarr;</a>
         </article>
 
         <article class="service-card">
@@ -101,6 +101,7 @@
           <h3>Lash Services</h3>
           <p>Classic and volume lash extensions, lifts, and tints designed to
              frame your eyes with a natural or dramatic finish.</p>
+          <a class="card-link" href="services.html#lash">Learn more &rarr;</a>
         </article>
 
         <article class="service-card">
@@ -113,6 +114,7 @@
           <h3>Body Slimming</h3>
           <p>Targeted contouring and slimming treatments that support
              circulation, tone, and a firmer, more sculpted silhouette.</p>
+          <a class="card-link" href="services.html#slimming">Learn more &rarr;</a>
         </article>
 
         <article class="service-card">
@@ -125,6 +127,7 @@
           <h3>Head Spa</h3>
           <p>A deeply relaxing scalp and hair ritual &mdash; cleansing, massage,
              and nourishing treatments that melt away tension.</p>
+          <a class="card-link" href="services.html#head-spa">Learn more &rarr;</a>
         </article>
 
         <article class="service-card">
@@ -137,154 +140,212 @@
           <h3>Diode Laser Hair Removal</h3>
           <p>Gentle, effective diode laser treatments for smoother, longer-lasting
              results with less irritation than traditional methods.</p>
+          <a class="card-link" href="services.html#laser">Learn more &rarr;</a>
         </article>
 
         <article class="service-card service-card-cta">
           <h3>Not sure where to start?</h3>
           <p>Tell us your skin and hair goals and we&rsquo;ll recommend the
              right treatment or combination for you.</p>
-          <a href="#contact" class="btn btn-primary btn-small">Ask Us</a>
+          <a href="contact.html" class="btn btn-primary btn-small">Ask Us</a>
         </article>
 
       </div>
     </div>
   </section>
 
-  <section class="section about" id="about">
-    <div class="container about-inner">
-      <div class="about-copy">
-        <p class="eyebrow">Our philosophy</p>
-        <h2 class="section-title">Beauty, as a ritual &mdash; not a rush</h2>
-        <p>
-          At The Beauty Ritual, every visit is unhurried. Our estheticians and
-          technicians take the time to understand your skin, your hair, and
-          your goals before recommending a treatment plan &mdash; so results
-          feel personal, not generic.
+  <!-- Locations -->
+  <section class="section alt" id="locations">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow center">Find us</p>
+        <h2 class="section-title center">Our Locations</h2>
+        <p class="section-lead center">
+          Visit us at either of our studios &mdash; both offer our full menu
+          of services in a quiet, private setting.
         </p>
-        <p>
-          We keep our space soft, quiet, and uncluttered on purpose. It&rsquo;s
-          the kind of place you come to breathe out.
-        </p>
-        <ul class="about-points">
-          <li><span class="point-icon" aria-hidden="true">&#10003;</span> Trained, experienced technicians</li>
-          <li><span class="point-icon" aria-hidden="true">&#10003;</span> Treatments tailored to your skin &amp; goals</li>
-          <li><span class="point-icon" aria-hidden="true">&#10003;</span> Clean, calming, private treatment rooms</li>
-          <li><span class="point-icon" aria-hidden="true">&#10003;</span> Quality products, thoughtfully chosen</li>
-        </ul>
       </div>
-      <div class="about-visual" aria-hidden="true">
-        <div class="about-visual-blob"></div>
-        <div class="about-visual-ring"></div>
+
+      <div class="location-grid">
+        <article class="location-card">
+          <div class="location-map" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22s7-7.4 7-12.5A7 7 0 0 0 5 9.5C5 14.6 12 22 12 22Z" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="location-body">
+            <h3>Downtown Studio</h3>
+            <dl class="location-meta">
+              <div><strong>Address:</strong> 123 Serenity Lane, Suite 2, Your City, ST 00000</div>
+              <div><strong>Phone:</strong> (000) 000-0000</div>
+              <div><strong>Hours:</strong> Tue&ndash;Sat, 10am&ndash;7pm</div>
+            </dl>
+            <a href="locations.html" class="btn btn-ghost btn-small">View Details</a>
+          </div>
+        </article>
+
+        <article class="location-card">
+          <div class="location-map" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22s7-7.4 7-12.5A7 7 0 0 0 5 9.5C5 14.6 12 22 12 22Z" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="location-body">
+            <h3>Uptown Studio</h3>
+            <dl class="location-meta">
+              <div><strong>Address:</strong> 456 Wellness Ave, Your City, ST 00000</div>
+              <div><strong>Phone:</strong> (000) 000-0001</div>
+              <div><strong>Hours:</strong> Mon&ndash;Fri, 10am&ndash;6pm</div>
+            </dl>
+            <a href="locations.html" class="btn btn-ghost btn-small">View Details</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="section-foot">
+        <a href="locations.html" class="btn btn-primary btn-small">See All Locations</a>
       </div>
     </div>
   </section>
 
-  <section class="section products" id="products">
-    <div class="container products-inner">
-      <div class="products-text">
-        <p class="eyebrow">Continue the ritual at home</p>
-        <h2 class="section-title">A small, curated shelf</h2>
-        <p>
-          Alongside our treatments, we carry a short list of skin and hair
-          care products we personally trust &mdash; enough to support your
-          routine at home, without the overwhelm of a full retail wall.
-          Ask your technician for a recommendation suited to your skin.
-        </p>
-        <a href="#contact" class="btn btn-ghost btn-small">Ask About Products</a>
+  <!-- Reviews -->
+  <section class="section on-surface" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow center">Client love</p>
+        <h2 class="section-title center">What Clients Are Saying</h2>
+      </div>
+
+      <div class="review-grid">
+        <article class="review-card">
+          <div class="review-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-quote">&ldquo;The head spa treatment is unreal &mdash; I've never felt so relaxed. The room, the music, everything is so peaceful.&rdquo;</p>
+          <p class="review-author">S. Lim</p>
+          <p class="review-service">Head Spa</p>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-quote">&ldquo;My esthetician actually listened to what my skin needed instead of pushing a package. My skin has never looked better.&rdquo;</p>
+          <p class="review-author">A. Rahman</p>
+          <p class="review-service">Facial</p>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-quote">&ldquo;Booked the diode laser package and the results after a few sessions have already been noticeable. Clean space, friendly staff.&rdquo;</p>
+          <p class="review-author">J. Tan</p>
+          <p class="review-service">Diode Laser Hair Removal</p>
+        </article>
+      </div>
+
+      <div class="section-foot">
+        <a href="reviews.html" class="btn btn-ghost btn-small">Read All Reviews</a>
       </div>
     </div>
   </section>
 
-  <section class="section contact" id="contact">
-    <div class="container contact-inner">
-      <div class="contact-info">
-        <p class="eyebrow">Visit us</p>
-        <h2 class="section-title">Book Your Ritual</h2>
-        <p class="section-lead">
-          Reach out to check availability, ask a question, or schedule your
-          next appointment. We look forward to welcoming you.
+  <!-- Featured Products -->
+  <section class="section alt" id="products">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow center">Continue the ritual at home</p>
+        <h2 class="section-title center">Featured Products</h2>
+        <p class="section-lead center">
+          A small, curated shelf of skin and hair care essentials we
+          personally trust &mdash; enough to support your routine at home.
         </p>
-
-        <dl class="info-list">
-          <div class="info-item">
-            <dt>Address</dt>
-            <dd>123 Serenity Lane, Suite 2<br>Your City, ST 00000</dd>
-          </div>
-          <div class="info-item">
-            <dt>Phone</dt>
-            <dd><a href="tel:+10000000000">(000) 000-0000</a></dd>
-          </div>
-          <div class="info-item">
-            <dt>Email</dt>
-            <dd><a href="mailto:hello@thebeautyritual.com">hello@thebeautyritual.com</a></dd>
-          </div>
-          <div class="info-item">
-            <dt>Hours</dt>
-            <dd>
-              Tue&ndash;Fri: 10am &ndash; 7pm<br>
-              Saturday: 9am &ndash; 5pm<br>
-              Sun &amp; Mon: Closed
-            </dd>
-          </div>
-        </dl>
       </div>
 
-      <form class="contact-form" id="contact-form" novalidate>
-        <h3>Send us a message</h3>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-media" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 6h8v6l4 4v24a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4V16l4-4V6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M16 24h16" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Skincare</span>
+            <h3>Hydrating Facial Serum</h3>
+            <p>A lightweight daily serum that supports the results of your
+               in-studio facials between visits.</p>
+            <a href="products.html" class="btn btn-ghost btn-small">View Product</a>
+          </div>
+        </article>
 
-        <div class="form-row">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" autocomplete="name" required>
-          <span class="form-error" id="name-error" role="alert"></span>
-        </div>
+        <article class="product-card">
+          <div class="product-media" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 6c-3 4-4 6-4 8.5a4 4 0 1 0 8 0C28 12 27 10 24 6Z" fill="currentColor"/>
+              <path d="M14 20c0 7 4 10 4 15a6 6 0 0 0 12 0c0-5 4-8 4-15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Hair Care</span>
+            <h3>Nourishing Scalp Oil</h3>
+            <p>Pairs with our head spa ritual to keep your scalp calm and
+               your hair nourished at home.</p>
+            <a href="products.html" class="btn btn-ghost btn-small">View Product</a>
+          </div>
+        </article>
 
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" autocomplete="email" required>
-          <span class="form-error" id="email-error" role="alert"></span>
-        </div>
+        <article class="product-card">
+          <div class="product-media" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M24 16v8l6 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="product-body">
+            <span class="product-tag">Body Care</span>
+            <h3>Soothing After-Care Balm</h3>
+            <p>A gentle, fragrance-light balm recommended after laser and
+               slimming treatments to calm the skin.</p>
+            <a href="products.html" class="btn btn-ghost btn-small">View Product</a>
+          </div>
+        </article>
+      </div>
 
-        <div class="form-row">
-          <label for="service">Interested in</label>
-          <select id="service" name="service">
-            <option value="">Select a service (optional)</option>
-            <option>Facial</option>
-            <option>Lash Services</option>
-            <option>Body Slimming</option>
-            <option>Head Spa</option>
-            <option>Diode Laser Hair Removal</option>
-            <option>Not sure yet</option>
-          </select>
-        </div>
+      <div class="section-foot">
+        <a href="products.html" class="btn btn-primary btn-small">Shop All Products</a>
+      </div>
+    </div>
+  </section>
 
-        <div class="form-row">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-          <span class="form-error" id="message-error" role="alert"></span>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-      </form>
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to begin your ritual?</h2>
+      <p>Book your appointment today and step into a space made for slowing down.</p>
+      <a href="contact.html" class="btn btn-primary">Book Now</a>
     </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="container footer-inner">
+  <div class="container footer-grid">
     <div class="footer-brand">
-      <span class="logo-text">The Beauty Ritual</span>
+      <span class="logo-script">The Beauty</span>
+      <span class="logo-ritual">Ritual</span>
       <p>A calm space for facials, lash, slimming, head spa &amp; laser hair removal.</p>
     </div>
-    <nav aria-label="Footer">
+    <div class="footer-col">
+      <h4>Explore</h4>
       <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Visit &amp; Hours</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>
+    </div>
+    <div class="footer-col">
+      <h4>Visit Us</h4>
+      <p>123 Serenity Lane, Suite 2<br>Your City, ST 00000</p>
+      <p><a href="tel:+10000000000">(000) 000-0000</a></p>
+      <p><a href="mailto:hello@thebeautyritual.com">hello@thebeautyritual.com</a></p>
+    </div>
   </div>
   <div class="container footer-bottom">
     <p>&copy; <span id="year"></span> The Beauty Ritual. All rights reserved.</p>
