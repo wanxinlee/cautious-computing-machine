@@ -55,9 +55,9 @@
   .claims{position:absolute;top:92mm;left:9mm;display:flex;flex-direction:column;gap:5mm}
   .claim{display:flex;align-items:center;gap:3mm;font-size:8pt;font-weight:600;color:var(--navy);line-height:1.25}
   .claim .ic{width:12mm;height:12mm;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;flex:0 0 12mm}
-  .next{position:absolute;left:9mm;bottom:66mm;font-size:16pt;font-weight:700;color:var(--navy);line-height:1.2}
-  .next small{display:block;font-size:8.6pt;font-weight:500;color:var(--blue);margin-top:2mm}
-  .bottle{position:absolute;right:-13mm;bottom:-14mm}
+  .next{position:absolute;left:9mm;bottom:68mm;font-size:16pt;font-weight:700;color:var(--navy);line-height:1.2}
+  .next small{display:block;max-width:60mm;font-size:8.6pt;font-weight:500;color:var(--blue);margin-top:2mm}
+  .bottle{position:absolute;right:3mm;bottom:0;height:68mm;-webkit-mask-image:radial-gradient(ellipse 68% 66% at 50% 52%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 68% 66% at 50% 52%,#000 62%,transparent 100%)}
 
   /* ---------- Inside spread ---------- */
   .i1{background:#fff}
@@ -98,9 +98,10 @@
   .i3 .band{position:absolute;left:0;right:0;top:0;height:10mm;background:var(--blue)}
   .i3 h2{position:absolute;top:21mm;left:8mm;right:8mm;font-size:11pt;font-weight:800;color:var(--navy);text-align:center;line-height:1.3;padding-bottom:2mm;border-bottom:.4mm solid var(--navy)}
   .cycle{position:absolute;top:38mm;left:0;right:0}
-  .results{position:absolute;top:118mm;left:8mm;right:8mm;display:flex;flex-direction:column;gap:3mm}
+  .results{position:absolute;top:118mm;left:8mm;right:8mm;display:flex;flex-direction:column;gap:2.4mm}
   .res{display:grid;grid-template-columns:1fr 5mm 1fr;gap:0;align-items:center}
-  .ph-img{height:17mm;border-radius:1.2mm;position:relative;overflow:hidden}
+  .ph-img{height:18mm;border-radius:1.2mm;position:relative;overflow:hidden}
+  .ph-img img{width:100%;height:100%;object-fit:cover;object-position:bottom;display:block}
   .ph-img.b{background:linear-gradient(135deg,#cfa58a,#b88268 60%,#a8715a)}
   .ph-img.a{background:linear-gradient(135deg,#e2bfa8,#d3a58c 60%,#c79479)}
   .ph-img span{position:absolute;right:1.5mm;bottom:1mm;font-size:5.8pt;font-weight:700;color:#fff;text-shadow:0 0 2px rgba(0,0,0,.6)}
@@ -220,26 +221,7 @@
     <div class="next">Next-Generation<br>Skin Renewal
       <small>Nourishing the deeper layers of the skin</small></div>
 
-    <svg class="bottle" width="62mm" height="78mm" viewBox="0 0 270 340">
-      <defs>
-        <linearGradient id="gl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity=".95"/><stop offset=".5" stop-color="#dbe6f8" stop-opacity=".9"/><stop offset="1" stop-color="#b6c9ea" stop-opacity=".95"/></linearGradient>
-      </defs>
-      <g transform="rotate(-28 150 190)">
-        <!-- dropper -->
-        <path d="M120 -40 Q 128 -52 136 -40 L134 56 L122 56Z" fill="#dce7f8" stroke="#b7c9e8"/>
-        <ellipse cx="128" cy="62" rx="22" ry="14" fill="#f2f6fd" stroke="#b7c9e8"/>
-        <rect x="104" y="62" width="48" height="26" rx="6" fill="#ffffff" stroke="#b7c9e8"/>
-        <!-- glass body -->
-        <rect x="70" y="88" width="116" height="250" rx="16" fill="url(#gl)" stroke="#a9bde3" stroke-width="1.5"/>
-        <rect x="80" y="104" width="96" height="216" rx="10" fill="#ffffff" opacity=".55"/>
-        <!-- label -->
-        <g transform="translate(128 215) rotate(-90)">
-          <text x="0" y="-10" text-anchor="middle" font-size="24" font-weight="800" fill="#2f4b94" font-family="Inter,Arial">XE`LHA Peel</text>
-          <text x="0" y="8" text-anchor="middle" font-size="9" fill="#4a6fb5" font-family="Inter,Arial">Basic Cell Wakener</text>
-          <text x="0" y="22" text-anchor="middle" font-size="7" fill="#8095c4" font-family="Inter,Arial">30 ml</text>
-        </g>
-      </g>
-    </svg>
+    <img class="bottle" src="img/product.jpg">
   </div>
 </section>
 
@@ -393,10 +375,10 @@
     </svg>
 
     <div class="results">
-      <div class="res"><div class="ph-img b"><i>BEFORE</i></div><div class="arrow">›</div><div class="ph-img a"><span>Smoother texture</span><i>AFTER</i></div></div>
-      <div class="res"><div class="ph-img b"><i>BEFORE</i></div><div class="arrow">›</div><div class="ph-img a"><span>Fewer blackheads</span><i>AFTER</i></div></div>
-      <div class="res"><div class="ph-img b"><i>BEFORE</i></div><div class="arrow">›</div><div class="ph-img a"><span>Improved dullness</span><i>AFTER</i></div></div>
-      <div class="res"><div class="ph-img b"><i>BEFORE</i></div><div class="arrow">›</div><div class="ph-img a"><span>Radiant, refined skin</span><i>AFTER</i></div></div>
+      <div class="res"><div class="ph-img"><img src="img/before1.jpg"></div><div class="arrow">›</div><div class="ph-img"><img src="img/after1.jpg"></div></div>
+      <div class="res"><div class="ph-img"><img src="img/before2.jpg"></div><div class="arrow">›</div><div class="ph-img"><img src="img/after2.jpg"></div></div>
+      <div class="res"><div class="ph-img"><img src="img/before3.jpg"></div><div class="arrow">›</div><div class="ph-img"><img src="img/after3.jpg"></div></div>
+      <div class="res"><div class="ph-img"><img src="img/before4.jpg"></div><div class="arrow">›</div><div class="ph-img"><img src="img/after4.jpg"></div></div>
     </div>
     <div class="legal">Individual results may vary.</div>
   </div>
