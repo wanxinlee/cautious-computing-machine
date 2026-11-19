@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>XE'LHA Peel – Tri-fold Brochure</title>
+<style>
+  @page { size: 297mm 210mm; margin: 0; }
+  :root{
+    --navy:#2f4b94; --blue:#4a6fb5; --mid:#7f9bd0; --pale:#e8eef9; --paler:#f4f7fc; --ink:#2b3a63; --grey:#6b7899;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#fff}
+  body{font-family:'Inter','Helvetica Neue',Arial,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .sheet{width:297mm;height:210mm;display:grid;grid-template-columns:99mm 99mm 99mm;page-break-after:always;overflow:hidden;position:relative}
+  .sheet:last-child{page-break-after:auto}
+  .panel{position:relative;width:99mm;height:210mm;overflow:hidden}
+  svg{display:block}
+
+  /* ---------- Panel 1 : benefits + aftercare ---------- */
+  .p1{background:#fff}
+  .p1 .top{position:absolute;left:0;right:0;top:0;height:8mm;background:var(--blue)}
+  .p1 h2{position:absolute;top:22mm;left:0;right:0;text-align:center;font-size:25pt;font-weight:800;color:var(--blue);letter-spacing:.5px}
+  .benefits{position:absolute;top:38mm;left:9mm;right:7mm;display:flex;flex-direction:column;gap:3.6mm}
+  .pill{position:relative;height:14.5mm;background:var(--blue);color:#fff;border-radius:8mm 0 0 8mm;clip-path:polygon(0 0,calc(100% - 6mm) 0,100% 50%,calc(100% - 6mm) 100%,0 100%);display:flex;align-items:center;padding-left:17mm;padding-right:9mm;font-size:8.2pt;font-weight:600;line-height:1.3}
+  .pill .ic{position:absolute;left:1.2mm;top:1.2mm;width:12.6mm;height:12.6mm;border-radius:50%;background:#e4ebf8;display:flex;align-items:center;justify-content:center}
+  .wave{position:absolute;left:0;right:0;top:112mm;bottom:0}
+  .care{position:absolute;left:10mm;right:9mm;top:123mm}
+  .care h3{text-align:center;font-size:13pt;font-weight:700;color:var(--navy);padding-bottom:2mm;border-bottom:.5mm solid var(--navy);width:62mm;margin:0 auto 4.5mm}
+  .care .item{display:flex;gap:3mm;margin-bottom:3.8mm}
+  .care .num{flex:0 0 6.5mm;height:6.5mm;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;font-size:9pt;display:flex;align-items:center;justify-content:center;margin-top:.5mm}
+  .care b{display:block;font-size:9pt;color:var(--navy);margin-bottom:1mm;line-height:1.3}
+  .care p{font-size:7.4pt;line-height:1.5;color:#4f6199}
+
+  /* ---------- Panel 2 : back ---------- */
+  .p2{background:linear-gradient(180deg,#fff 0%,#f3f6fc 55%,#e7eefa 100%)}
+  .p2 .band{position:absolute;left:0;right:0;top:0;height:8mm;background:var(--blue);border-radius:0 0 0 12mm}
+  .range{position:absolute;top:20mm;left:0;right:0;display:flex;justify-content:center}
+  .p2 h3{position:absolute;top:84mm;left:0;right:0;text-align:center;font-size:17pt;font-weight:800;color:var(--navy);letter-spacing:.3px;line-height:1.25}
+  .p2 .sub{position:absolute;top:104mm;left:0;right:0;text-align:center;font-size:8.6pt;color:var(--blue);font-weight:500;padding:0 12mm;line-height:1.5}
+  .logo-circle{position:absolute;left:50%;bottom:34mm;transform:translateX(-50%);width:60mm;height:60mm;border-radius:50%;background:radial-gradient(circle at 35% 30%,#dfe8f8,#9db4de);display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+  .logo-circle span{font-size:8.5pt;font-weight:600;letter-spacing:.4px;line-height:1.5;border:1px dashed rgba(255,255,255,.85);border-radius:3mm;padding:4mm 5mm}
+  .p2 .foot{position:absolute;bottom:12mm;left:0;right:0;text-align:center;font-size:7pt;color:var(--grey);letter-spacing:1.6px;text-transform:uppercase}
+
+  /* ---------- Panel 3 : cover ---------- */
+  .p3{background:linear-gradient(160deg,#f9fbff 0%,#dfe8f7 55%,#c3d3ee 100%)}
+  .p3 .flow{position:absolute;inset:0;opacity:.8}
+  .forbes{position:absolute;top:8mm;left:8mm;width:17mm;height:19mm;background:var(--navy);color:#fff;text-align:center;border:.5mm solid #cdd8ef;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6mm}
+  .forbes .no{font-size:15pt;font-weight:800;line-height:1}
+  .forbes .nm{font-family:Georgia,'DejaVu Serif',serif;font-style:italic;font-size:7pt;font-weight:700}
+  .forbes .yr{font-size:3.6pt;letter-spacing:.2px;opacity:.9;line-height:1.3}
+  .ribbon{position:absolute;top:0;right:0;width:36mm;height:36mm;overflow:hidden}
+  .ribbon div{position:absolute;top:7mm;right:-12mm;width:50mm;transform:rotate(45deg);background:linear-gradient(90deg,#e9d3ae,#f6e7c8 50%,#d9bb86);text-align:center;padding:1.6mm 0;color:#6a5424;font-size:6.2pt;font-weight:700;letter-spacing:.6px;line-height:1.2}
+  .brand{position:absolute;top:50mm;left:0;right:0;text-align:center;font-size:35pt;font-weight:800;color:var(--blue);letter-spacing:1px}
+  .tag{position:absolute;top:73mm;left:0;right:0;text-align:center;font-size:8.8pt;font-weight:500;color:var(--navy);padding:0 8mm;line-height:1.45}
+  .claims{position:absolute;top:92mm;left:9mm;display:flex;flex-direction:column;gap:5mm}
+  .claim{display:flex;align-items:center;gap:3mm;font-size:8pt;font-weight:600;color:var(--navy);line-height:1.25}
+  .claim .ic{width:12mm;height:12mm;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;flex:0 0 12mm}
+  .next{position:absolute;left:9mm;bottom:66mm;font-size:16pt;font-weight:700;color:var(--navy);line-height:1.2}
+  .next small{display:block;font-size:8.6pt;font-weight:500;color:var(--blue);margin-top:2mm}
+  .bottle{position:absolute;right:-13mm;bottom:-14mm}
+
+  /* ---------- Inside spread ---------- */
+  .i1{background:#fff}
+  .i1 .head{position:absolute;left:0;top:0;width:100%;height:58mm;background:linear-gradient(135deg,#5a7cc0,#3f63ad);border-radius:0 0 18mm 0;color:#fff}
+  .i1 .head .b{position:absolute;top:8mm;left:0;right:0;text-align:center;font-size:11pt;font-weight:800;letter-spacing:.5px}
+  .i1 .head h2{position:absolute;top:16mm;left:4mm;right:10mm;font-size:11pt;font-weight:800;line-height:1.3;text-align:center}
+  .i1 .head hr{position:absolute;top:30mm;left:34mm;width:27mm;border:0;border-top:.7mm solid #fff;border-radius:1mm}
+  .i1 .head p{position:absolute;top:34mm;left:8mm;right:12mm;font-size:6.9pt;line-height:1.5;text-align:center;opacity:.95}
+  .tag-title{display:block;margin:0 auto;width:63mm;text-align:center;border:.45mm solid var(--navy);border-radius:3mm;padding:1mm 0;font-weight:800;font-size:10pt;color:var(--navy);position:relative}
+  .block{position:absolute;left:8mm;right:8mm}
+  .block .cap{text-align:center;font-size:7.2pt;font-weight:600;color:var(--navy);margin:1.5mm 0 2mm}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+  .pair .cell h4{font-size:7.5pt;font-weight:700;margin:2mm 0 1mm;display:flex;gap:1.3mm;align-items:flex-start;line-height:1.25}
+  .pair .cell p{font-size:6.3pt;line-height:1.45;color:#51628f}
+  .x,.v{flex:0 0 3.7mm;height:3.7mm;border-radius:50%;color:#fff;font-size:6pt;display:inline-flex;align-items:center;justify-content:center;font-weight:900;margin-top:-.2mm}
+  .x{background:#d9435a}.v{background:var(--blue)}
+  .bad{color:#c63a50}.good{color:var(--navy)}
+
+  .i2{background:#fff}
+  .i2 .band{position:absolute;left:0;right:0;top:0;height:10mm;background:var(--blue);border-radius:0 0 12mm 12mm}
+  .zero{position:absolute;top:19mm;left:10mm;display:flex;align-items:center;gap:2mm}
+  .zero .big{font-size:50pt;font-weight:800;color:var(--navy);line-height:.9;border:1.2mm solid var(--navy);border-radius:50%;width:19mm;height:19mm;display:flex;align-items:center;justify-content:center;font-size:31pt}
+  .zero .t{font-size:11pt;font-weight:700;color:var(--blue);line-height:1.1}
+  .zero .t b{display:block;font-size:19pt;color:var(--navy)}
+  .ph{position:absolute;top:24mm;right:8mm;background:var(--blue);color:#fff;border-radius:1.5mm;padding:1.6mm 3mm;font-size:6.6pt;font-weight:600;text-align:center;line-height:1.35}
+  .ph b{display:block;font-size:9.5pt;font-weight:800;letter-spacing:.4px}
+  .skin{position:absolute;top:46mm;left:6mm;right:6mm}
+  .skin-note{position:absolute;top:127mm;left:8mm;right:8mm;font-size:6.9pt;line-height:1.5;color:var(--navy);text-align:center;font-weight:500}
+  table.gen{position:absolute;top:141mm;left:7mm;right:7mm;width:85mm;border-collapse:collapse;font-size:6.6pt}
+  table.gen th{background:var(--blue);color:#fff;font-weight:600;padding:1.8mm 1mm;font-size:7.4pt}
+  table.gen td{padding:2.3mm 1.4mm;text-align:center;border-bottom:.25mm solid #c9d3ea;color:#4f6199;line-height:1.35;vertical-align:middle}
+  table.gen td:first-child{font-weight:700;color:var(--grey);white-space:nowrap}
+  table.gen tr.hl td{background:#dfe6f3;color:var(--navy);font-weight:700;border-bottom:.5mm solid #c9d3ea}
+  table.gen tr.hl td:first-child{color:var(--navy)}
+  .crown{color:#e6b04c;font-size:7pt}
+
+  .i3{background:#fff}
+  .i3 .band{position:absolute;left:0;right:0;top:0;height:10mm;background:var(--blue)}
+  .i3 h2{position:absolute;top:21mm;left:8mm;right:8mm;font-size:11pt;font-weight:800;color:var(--navy);text-align:center;line-height:1.3;padding-bottom:2mm;border-bottom:.4mm solid var(--navy)}
+  .cycle{position:absolute;top:38mm;left:0;right:0}
+  .results{position:absolute;top:118mm;left:8mm;right:8mm;display:flex;flex-direction:column;gap:3mm}
+  .res{display:grid;grid-template-columns:1fr 5mm 1fr;gap:0;align-items:center}
+  .ph-img{height:17mm;border-radius:1.2mm;position:relative;overflow:hidden}
+  .ph-img.b{background:linear-gradient(135deg,#cfa58a,#b88268 60%,#a8715a)}
+  .ph-img.a{background:linear-gradient(135deg,#e2bfa8,#d3a58c 60%,#c79479)}
+  .ph-img span{position:absolute;right:1.5mm;bottom:1mm;font-size:5.8pt;font-weight:700;color:#fff;text-shadow:0 0 2px rgba(0,0,0,.6)}
+  .ph-img i{position:absolute;left:1.5mm;top:1mm;font-size:5pt;font-style:normal;color:#fff;opacity:.85;letter-spacing:.3px}
+  .arrow{width:5mm;height:5mm;border-radius:50%;background:var(--blue);color:#fff;font-size:6pt;display:flex;align-items:center;justify-content:center;margin:0 auto;z-index:2}
+  .legal{position:absolute;bottom:6mm;left:8mm;right:8mm;font-size:5.6pt;color:var(--grey);text-align:center;line-height:1.4}
+</style>
+</head>
+<body>
+
+<!-- ======================= SHEET 1 : OUTSIDE ======================= -->
+<section class="sheet" id="outside">
+
+  <!-- Panel 1: inside flap -->
+  <div class="panel p1">
+    <div class="top"></div>
+    <h2>4 Key Benefits</h2>
+    <div class="benefits">
+      <div class="pill"><div class="ic">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4a6fb5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.500-7-10V6z"/><path d="M9 12l2.200 2.200L15.500 10"/></svg></div>
+        Gentle, non-irritating exfoliation</div>
+      <div class="pill"><div class="ic">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4a6fb5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 21h12M7 3c0 5 5 6 5 9s-5 4-5 9M17 3c0 5-5 6-5 9s5 4 5 9"/></svg></div>
+        No downtime required</div>
+      <div class="pill"><div class="ic">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4a6fb5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.500"/><path d="M6 21c0-4 3-6 6-6s6 2 6 6"/><path d="M9.500 8.500l1.800 1.800 3-3.200"/></svg></div>
+        Can be combined with high-energy treatments for a greater synergistic effect</div>
+      <div class="pill"><div class="ic">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4a6fb5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/><path d="M9 15l2 2 4-4"/></svg></div>
+        Safe for long-term use with regular weekly treatments</div>
+    </div>
+
+    <svg class="wave" viewBox="0 0 99 98" preserveAspectRatio="none" width="99mm" height="98mm">
+      <defs><linearGradient id="wg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5f80c3"/><stop offset="1" stop-color="#a9bde3"/></linearGradient></defs>
+      <path d="M0 14 C 25 -4, 70 -4, 99 12 L99 98 L0 98Z" fill="#dfe7f6"/>
+      <path d="M0 22 C 30 6, 70 6, 99 20 L99 98 L0 98Z" fill="#edf1fa"/>
+    </svg>
+
+    <div class="care">
+      <h3>Post-Treatment Care</h3>
+      <div class="item"><div class="num">1</div><div>
+        <b>Avoid strong irritation to the skin</b>
+        <p>On the day of your XE'LHA Peel treatment, use only a gentle cleanser. For the following three days, avoid products containing alcohol, or vitamin A and C.</p></div></div>
+      <div class="item"><div class="num">2</div><div>
+        <b>Keep skin hydrated and nourished</b>
+        <p>The treatment opens the skin's inner pathways, so we recommend replenishing moisture and nutrients afterwards.</p></div></div>
+      <div class="item"><div class="num">3</div><div>
+        <b>Avoid other skin-renewal treatments for one week</b>
+        <p>Having other resurfacing treatments, or using vitamin C, within one week after XE'LHA Peel may cause skin damage.</p></div></div>
+    </div>
+  </div>
+
+  <!-- Panel 2: back cover -->
+  <div class="panel p2">
+    <div class="band"></div>
+    <div class="range">
+      <svg width="78mm" height="56mm" viewBox="0 0 300 215">
+        <defs>
+          <linearGradient id="bx" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e3eaf7"/></linearGradient>
+        </defs>
+        <!-- brushes -->
+        <g transform="rotate(-18 40 110)">
+          <rect x="36" y="20" width="9" height="110" rx="4" fill="#3b4e8c"/>
+          <path d="M31 20 L50 20 L56 -2 L26 -2Z" fill="#cdbfae" transform="translate(0 4)"/>
+        </g>
+        <g transform="rotate(-8 62 120)">
+          <rect x="58" y="34" width="7" height="100" rx="3" fill="#6a7fb8"/>
+          <path d="M54 36 L69 36 L72 20 L50 20Z" fill="#8f7b66"/>
+        </g>
+        <!-- Peel box -->
+        <g transform="translate(78 62)">
+          <rect width="76" height="118" rx="3" fill="url(#bx)" stroke="#c4d0ea"/>
+          <rect y="0" width="76" height="9" fill="#4a6fb5" rx="3"/>
+          <rect x="8" y="18" width="38" height="3" fill="#9fb2db"/><rect x="8" y="25" width="50" height="2" fill="#c9d4ec"/><rect x="8" y="30" width="46" height="2" fill="#c9d4ec"/><rect x="8" y="35" width="52" height="2" fill="#c9d4ec"/><rect x="8" y="40" width="40" height="2" fill="#c9d4ec"/>
+          <text transform="translate(62 110) rotate(-90)" font-size="11" font-weight="800" fill="#2f4b94" font-family="Inter,Arial">XE'LHA (Peel)</text>
+        </g>
+        <!-- Foam box -->
+        <g transform="translate(150 105)">
+          <rect width="62" height="80" rx="3" fill="url(#bx)" stroke="#c4d0ea"/>
+          <rect width="62" height="8" fill="#4a6fb5" rx="3"/>
+          <rect x="7" y="16" width="30" height="3" fill="#9fb2db"/><rect x="7" y="23" width="40" height="2" fill="#c9d4ec"/><rect x="7" y="28" width="36" height="2" fill="#c9d4ec"/>
+          <text transform="translate(50 74) rotate(-90)" font-size="10" font-weight="800" fill="#2f4b94" font-family="Inter,Arial">XE'LHA (Foam)</text>
+        </g>
+        <!-- Mask box -->
+        <g transform="translate(212 66)">
+          <rect width="72" height="118" rx="3" fill="url(#bx)" stroke="#c4d0ea"/>
+          <rect width="72" height="9" fill="#4a6fb5" rx="3"/>
+          <rect x="8" y="18" width="36" height="3" fill="#9fb2db"/><rect x="8" y="25" width="48" height="2" fill="#c9d4ec"/><rect x="8" y="30" width="44" height="2" fill="#c9d4ec"/><rect x="8" y="35" width="50" height="2" fill="#c9d4ec"/>
+          <text transform="translate(58 112) rotate(-90)" font-size="11" font-weight="800" fill="#2f4b94" font-family="Inter,Arial">XE'LHA (Mask)</text>
+        </g>
+      </svg>
+    </div>
+    <h3>The XE'LHA<br>Skin Renewal Range</h3>
+    <div class="sub">Peel · Foam · Mask<br>Now available at our salon</div>
+    <div class="logo-circle"><span>YOUR SALON<br>LOGO HERE</span></div>
+    <div class="foot">Next-generation skin renewal</div>
+  </div>
+
+  <!-- Panel 3: front cover -->
+  <div class="panel p3">
+    <svg class="flow" viewBox="0 0 99 210" preserveAspectRatio="none">
+      <g fill="none" stroke="#ffffff" stroke-width=".35" opacity=".8">
+        <path d="M-5 20 C 30 50, 70 20, 60 90 S 20 130, 55 210"/>
+        <path d="M0 10 C 35 45, 75 20, 66 95 S 26 135, 60 215"/>
+        <path d="M-8 30 C 28 60, 66 28, 54 88 S 14 128, 50 205"/>
+      </g>
+      <g fill="#fff" opacity=".55"><circle cx="30" cy="60" r=".5"/><circle cx="40" cy="84" r=".4"/><circle cx="62" cy="52" r=".5"/><circle cx="50" cy="120" r=".4"/><circle cx="20" cy="110" r=".4"/><circle cx="70" cy="140" r=".5"/></g>
+    </svg>
+    <div class="forbes"><div class="no">1</div><div class="nm">Forbes</div><div class="yr">2026</div></div>
+    <div class="ribbon"><div>FDA<br>CERTIFIED</div></div>
+    <div class="brand">XE`LHA</div>
+    <div class="tag">Renew and infuse at the same time —<br>instantly illuminate your skin</div>
+    <div class="claims">
+      <div class="claim"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M8 15h8"/></svg></div><div><span style="font-size:10.5pt;font-weight:800">100%</span><br>Original formula</div></div>
+      <div class="claim"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.500-3 8-7 10-4-2-7-5.500-7-10V6z"/><path d="M9 12l2.200 2.200L15.500 10"/></svg></div><div>Passed sensitive<br>skin testing</div></div>
+    </div>
+    <div class="next">Next-Generation<br>Skin Renewal
+      <small>Nourishing the deeper layers of the skin</small></div>
+
+    <svg class="bottle" width="62mm" height="78mm" viewBox="0 0 270 340">
+      <defs>
+        <linearGradient id="gl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity=".95"/><stop offset=".5" stop-color="#dbe6f8" stop-opacity=".9"/><stop offset="1" stop-color="#b6c9ea" stop-opacity=".95"/></linearGradient>
+      </defs>
+      <g transform="rotate(-28 150 190)">
+        <!-- dropper -->
+        <path d="M120 -40 Q 128 -52 136 -40 L134 56 L122 56Z" fill="#dce7f8" stroke="#b7c9e8"/>
+        <ellipse cx="128" cy="62" rx="22" ry="14" fill="#f2f6fd" stroke="#b7c9e8"/>
+        <rect x="104" y="62" width="48" height="26" rx="6" fill="#ffffff" stroke="#b7c9e8"/>
+        <!-- glass body -->
+        <rect x="70" y="88" width="116" height="250" rx="16" fill="url(#gl)" stroke="#a9bde3" stroke-width="1.5"/>
+        <rect x="80" y="104" width="96" height="216" rx="10" fill="#ffffff" opacity=".55"/>
+        <!-- label -->
+        <g transform="translate(128 215) rotate(-90)">
+          <text x="0" y="-10" text-anchor="middle" font-size="24" font-weight="800" fill="#2f4b94" font-family="Inter,Arial">XE`LHA Peel</text>
+          <text x="0" y="8" text-anchor="middle" font-size="9" fill="#4a6fb5" font-family="Inter,Arial">Basic Cell Wakener</text>
+          <text x="0" y="22" text-anchor="middle" font-size="7" fill="#8095c4" font-family="Inter,Arial">30 ml</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ======================= SHEET 2 : INSIDE ======================= -->
+<section class="sheet" id="inside">
+
+  <!-- Inside left -->
+  <div class="panel i1">
+    <div class="head">
+      <div class="b">XE`LHA</div>
+      <h2>Upgraded Patented Anti-Sensitivity<br>Gentle, Zero Irritation</h2>
+      <hr>
+      <p>XE`LHA skin renewal gently dissolves keratin without irritation. Paired with an LHA alkaline base, its layered controlled-release technology penetrates quickly into the dermis to comprehensively stabilise the skin's surface condition.</p>
+    </div>
+
+    <!-- PEEL -->
+    <div class="block" style="top:65mm">
+      <span class="tag-title">XE`LHA PEEL</span>
+      <div class="cap">Removes built-up dead skin cells and promotes skin regeneration</div>
+      <div class="pair">
+        <div class="cell">
+          <svg viewBox="0 0 100 62" width="100%"><defs>
+            <pattern id="brick" width="14" height="8" patternUnits="userSpaceOnUse"><rect width="14" height="8" fill="#ef9aa0"/><path d="M0 .5H14M0 4.500H14M3 .5V4.500M10 4.500V8.500" stroke="#f9c7c9" stroke-width="1"/></pattern></defs>
+            <rect x="2" y="26" width="96" height="30" fill="url(#brick)" rx="2"/>
+            <rect x="2" y="42" width="96" height="14" fill="#f4b4b8" opacity=".6"/>
+            <g fill="#b98a58"><rect x="4" y="12" width="12" height="4" rx="1"/><rect x="22" y="9" width="16" height="4" rx="1"/><rect x="44" y="13" width="14" height="4" rx="1"/><rect x="64" y="10" width="14" height="4" rx="1"/><rect x="84" y="13" width="12" height="4" rx="1"/><rect x="8" y="19" width="22" height="4" rx="1"/><rect x="38" y="20" width="22" height="4" rx="1"/><rect x="68" y="20" width="24" height="4" rx="1"/></g>
+            <g fill="#7ca56f"><rect x="10" y="48" width="10" height="2.500" rx="1"/><rect x="42" y="49" width="10" height="2.500" rx="1"/><rect x="74" y="48" width="10" height="2.500" rx="1"/></g>
+          </svg>
+          <h4 class="bad"><span class="x">✕</span>Dead skin cell build-up</h4>
+          <p>Stress, seasonal changes and hormonal fluctuations cause dead skin to accumulate, interrupting the natural renewal cycle of skin cells.</p>
+        </div>
+        <div class="cell">
+          <svg viewBox="0 0 100 62" width="100%">
+            <rect x="2" y="26" width="96" height="30" fill="url(#brick)" rx="2"/>
+            <rect x="2" y="42" width="96" height="14" fill="#f4b4b8" opacity=".6"/>
+            <g fill="#fff"><path d="M18 8l1.500 4 4 1.500-4 1.500-1.500 4-1.500-4-4-1.500 4-1.500z"/><path d="M80 6l1.200 3 3 1.200-3 1.200-1.200 3-1.200-3-3-1.200 3-1.200z"/><path d="M52 14l1 2.500 2.500 1-2.500 1-1 2.500-1-2.500-2.500-1 2.500-1z"/></g>
+            <g fill="#7ca56f"><rect x="10" y="48" width="10" height="2.500" rx="1"/><rect x="42" y="49" width="10" height="2.500" rx="1"/><rect x="74" y="48" width="10" height="2.500" rx="1"/></g>
+          </svg>
+          <h4 class="good"><span class="v">✓</span>Restores skin to its optimal state</h4>
+          <p>Youth P-Sol™ patented technology rebuilds the skin's healthy barrier, improving moisture and nutrient absorption for a brighter, more radiant complexion.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILL -->
+    <div class="block" style="top:136mm">
+      <span class="tag-title">XE`LHA FILL</span>
+      <div class="cap">Builds a healthy skin microbiome environment</div>
+      <div class="pair">
+        <div class="cell">
+          <svg viewBox="0 0 100 62" width="100%"><defs>
+            <pattern id="fib" width="40" height="30" patternUnits="userSpaceOnUse"><rect width="40" height="30" fill="#f6dcc6"/><path d="M0 0L40 30M40 0L0 30" stroke="#fff" stroke-width="1.200"/><rect x="6" y="6" width="6" height="2.500" fill="#7ca56f"/><rect x="26" y="18" width="6" height="2.500" fill="#7ca56f"/><rect x="14" y="22" width="6" height="2.500" fill="#7ca56f" transform="rotate(30 17 23)"/></pattern></defs>
+            <rect x="2" y="4" width="96" height="9" fill="#ef9aa0" rx="2"/>
+            <rect x="2" y="13" width="96" height="44" fill="url(#fib)"/>
+          </svg>
+          <h4 class="bad"><span class="x">✕</span>Fragile, damaged skin barrier</h4>
+          <p>Ageing, stress and UV exposure weaken collagen and elastin structures, causing the barrier's function to gradually break down.</p>
+        </div>
+        <div class="cell">
+          <svg viewBox="0 0 100 62" width="100%"><defs>
+            <pattern id="cells" width="13" height="9" patternUnits="userSpaceOnUse"><rect width="13" height="9" fill="#e6c9a3"/><ellipse cx="6.500" cy="4.500" rx="5.200" ry="3.500" fill="#f1dcc0" stroke="#d1ad80" stroke-width=".5"/><rect x="2" y="3.800" width="9" height="1.600" fill="#7ca56f"/></pattern></defs>
+            <rect x="2" y="4" width="96" height="9" fill="#ef9aa0" rx="2"/>
+            <rect x="2" y="13" width="96" height="36" fill="url(#cells)"/>
+            <rect x="2" y="49" width="96" height="8" fill="#e56f78"/>
+            <path d="M60 8l1 2.500 2.500 1-2.500 1-1 2.500-1-2.500-2.500-1 2.500-1z" fill="#fff"/>
+          </svg>
+          <h4 class="good"><span class="v">✓</span>Healthier skin</h4>
+          <p>DactorTec™ patented technology uses effective active ingredients to stimulate fibroblasts to regenerate, leaving skin firmer and healthier.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inside middle -->
+  <div class="panel i2">
+    <div class="band"></div>
+    <div class="zero">
+      <div class="big">0</div>
+      <div class="t">Gentle!<b>Irritation</b></div>
+    </div>
+    <div class="ph"><b>pH 9.0</b>Alkaline PEEL</div>
+
+    <div class="skin">
+      <svg viewBox="0 0 90 80" width="100%">
+        <defs>
+          <marker id="ah" markerWidth="5" markerHeight="5" refX="2.500" refY="2.500" orient="auto"><path d="M0 0L5 2.500 0 5z" fill="#4a6fb5"/></marker>
+          <marker id="ag" markerWidth="5" markerHeight="5" refX="2.500" refY="2.500" orient="auto"><path d="M0 0L5 2.500 0 5z" fill="#888d9b"/></marker>
+          <pattern id="sp" width="9" height="7" patternUnits="userSpaceOnUse"><rect width="9" height="7" fill="#f4b9b6"/><ellipse cx="4.500" cy="3.500" rx="3.400" ry="2.600" fill="#fbd3d0" stroke="#e99a9a" stroke-width=".4"/></pattern>
+        </defs>
+        <text x="2" y="9" font-size="9" font-weight="800" fill="#2f4b94" font-family="Inter,Arial">4th</text>
+        <text x="2" y="15.500" font-size="4.600" font-weight="700" fill="#2f4b94" font-family="Inter,Arial">GENERATION</text>
+        <!-- LHA arrow -->
+        <g transform="translate(0 8)"><line x1="9" y1="22" x2="9" y2="68" stroke="#4a6fb5" stroke-width="3" marker-end="url(#ah)"/>
+        <text transform="translate(14 46) rotate(-90)" font-size="5.500" font-weight="800" fill="#2f4b94" font-family="Inter,Arial" letter-spacing="1">LHA</text></g>
+        <!-- layers -->
+        <g transform="translate(0 8)"><g font-family="Inter,Arial" font-size="2.300" fill="#5a4a30">
+          <path d="M22 14 L68 14 L70 20 L20 20Z" fill="#e8b36a"/><text x="23" y="18.300" font-weight="600">Stratum corneum</text><text x="61" y="18.300" font-weight="700" font-size="2.400">Horny</text>
+          <path d="M20 20 L70 20 L70 26 L20 26Z" fill="#e0a053"/><text x="23" y="24.500" font-weight="600">Stratum lucidum</text><text x="60" y="24.500" font-size="2.400" font-weight="700">Clear</text>
+          <path d="M20 26 L70 26 L70 32 L20 32Z" fill="#d78d43"/><text x="23" y="30.500" font-weight="600">Stratum granulosum</text><text x="57" y="30.500" font-size="2.400" font-weight="700">Granular</text>
+          <path d="M20 32 L70 32 L70 38 L20 38Z" fill="#cf7d36"/><text x="23" y="36.500" font-weight="600">Stratum spinosum</text><text x="57" y="36.500" font-size="2.400" font-weight="700">Spinous</text>
+          <rect x="20" y="38" width="50" height="22" fill="url(#sp)"/>
+          <rect x="20" y="60" width="50" height="6" fill="#efd6c3"/>
+        </g></g>
+        <!-- AHA BHA PHA -->
+        <line x1="76" y1="23" x2="76" y2="46" stroke="#888d9b" stroke-width="2.200" marker-end="url(#ag)"/>
+        <g font-size="3.300" fill="#555c70" font-family="Inter,Arial" font-weight="600"><text x="79" y="30">AHA</text><text x="79" y="35">BHA</text><text x="79" y="40">PHA</text></g>
+      </svg>
+    </div>
+
+    <div class="skin-note">Skilfully lets dead skin cells shed gently from the skin — effective, and suitable for sensitive and easily flaking skin.</div>
+
+    <table class="gen">
+      <tr><th style="width:20%">Acid</th><th style="width:42%">Skin reaction</th><th>Sensation</th></tr>
+      <tr><td>1st gen<br>AHA</td><td>Thinning of the epidermis</td><td>Stinging &amp; burning</td></tr>
+      <tr><td>2nd gen<br>BHA</td><td>Long-term use may cause redness, swelling and sensitivity</td><td>Cooling</td></tr>
+      <tr><td>3rd gen<br>PHA</td><td>Slight effect</td><td>Cooling</td></tr>
+      <tr class="hl"><td>4th gen<br>LHA</td><td><span class="crown">♛</span> Instant recovery,<br>no inflammatory reaction</td><td><span class="crown">♛</span> Gentle, non-irritating</td></tr>
+    </table>
+  </div>
+
+  <!-- Inside right -->
+  <div class="panel i3">
+    <div class="band"></div>
+    <h2>The Ultimate Solution to<br>All Your Skin Concerns</h2>
+    <svg class="cycle" viewBox="0 0 99 78" width="99mm" height="78mm">
+      <defs>
+        <radialGradient id="rg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e5ecf8"/></radialGradient>
+        <marker id="ca" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0 0L4 2 0 4z" fill="#3b5ba4"/></marker>
+      </defs>
+      <circle cx="49.500" cy="40" r="26" fill="url(#rg)"/>
+      <g fill="none" stroke-width="5.500" stroke-linecap="butt">
+        <path d="M49.500 18 A22 22 0 0 1 71.500 40" stroke="#6e92d1"/>
+        <path d="M71.500 40 A22 22 0 0 1 49.500 62" stroke="#4a6fb5"/>
+        <path d="M49.500 62 A22 22 0 0 1 27.500 40" stroke="#33559f"/>
+        <path d="M27.500 40 A22 22 0 0 1 49.500 18" stroke="#8aa9dc"/>
+      </g>
+      <!-- bottles -->
+      <g><rect x="43" y="31" width="5.500" height="16" rx="1" fill="#dfe8f6" stroke="#7f9bd0" stroke-width=".4"/><rect x="44.500" y="28" width="2.500" height="3.500" fill="#46619f"/>
+         <rect x="51" y="31" width="5.500" height="16" rx="1" fill="#dfe8f6" stroke="#7f9bd0" stroke-width=".4"/><rect x="52.500" y="28" width="2.500" height="3.500" fill="#46619f"/></g>
+      <!-- callouts -->
+      <g font-family="Inter,Arial" font-size="2.7" font-weight="600" fill="#fff" text-anchor="middle">
+        <rect x="1" y="6" width="40" height="13" rx="2.500" fill="#6e92d1"/>
+        <text x="21" y="11.500">Works in synergy with</text><text x="21" y="15.500">ultrasound &amp; RF treatments</text>
+        <rect x="58" y="6" width="40" height="13" rx="2.500" fill="#5a82c6"/>
+        <text x="78" y="11.500">Gently exfoliates</text><text x="78" y="15.500">without irritation</text>
+        <rect x="1" y="61" width="40" height="13" rx="2.500" fill="#33559f"/>
+        <text x="21" y="66.500">Promotes skin renewal</text><text x="21" y="70.500">Instant brightening &amp; glow</text>
+        <rect x="58" y="61" width="40" height="13" rx="2.500" fill="#4a6fb5"/>
+        <text x="78" y="66.500">Helps prevent breakouts</text><text x="78" y="70.500">&amp; regulates sebum</text>
+      </g>
+    </svg>
+
+    <div class="results">
+      <div class="res"><div class="ph-img b"><i>BEFORE</i></div><div class="arrow">›</div><div class="ph-img a"><span>Smoother texture</span><i>AFTER</i></div></div>
+      <div class="res"><div class="ph-img b"><i>BEFORE</i></div><div class="arrow">›</div><div class="ph-img a"><span>Fewer blackheads</span><i>AFTER</i></div></div>
+      <div class="res"><div class="ph-img b"><i>BEFORE</i></div><div class="arrow">›</div><div class="ph-img a"><span>Improved dullness</span><i>AFTER</i></div></div>
+      <div class="res"><div class="ph-img b"><i>BEFORE</i></div><div class="arrow">›</div><div class="ph-img a"><span>Radiant, refined skin</span><i>AFTER</i></div></div>
+    </div>
+    <div class="legal">Individual results may vary.</div>
+  </div>
+</section>
+
+</body>
+</html>
